@@ -1,13 +1,19 @@
-import { APP_NAME } from "@app/constants";
-import React from "react";
-import { Text, View } from "react-native";
+import PlanetList from "@app/screens/planet-list";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import * as React from "react";
+import { RecoilRoot } from "recoil";
 
-const Main = () => {
+const Stack = createNativeStackNavigator();
+
+export default function Main() {
   return (
-    <View>
-      <Text>{APP_NAME}</Text>
-    </View>
+    <RecoilRoot>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Planet Lis" component={PlanetList} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </RecoilRoot>
   );
-};
-
-export default Main;
+}

@@ -2,14 +2,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@app/config": ["./app/config"],
-      "@app/context": ["./app/context"],
-      "@app/constants": ["./app/constants"],
-      "@app/layout": ["./app/layout"],
-      "@app/navigation": ["./app/navigation"],
-      "@app/screens": ["./app/screens"],
-      "@app/theme": ["./app/theme"],
-      "@app/utils": ["./app/utils"]
+      "@app/config/*": ["./app/config/*"],
+      "@app/context/*": ["./app/context/*"],
+      "@app/constants/*": ["./app/constants/*"],
+      "@app/layout/*": ["./app/layout/*"],
+      "@app/navigation/*": ["./app/navigation/*"],
+      "@app/screens/*": ["./app/screens/*"],
+      "@app/theme/*": ["./app/theme/*"],
+      "@app/utils/*": ["./app/utils/*"],
+      "@app/states/*": ["./app/states/*"]
     },
   },
   "extends": "expo/tsconfig.base"
