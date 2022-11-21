@@ -1,25 +1,6 @@
-module.exports = {
-  presets: ['next/babel'],
-  plugins: [
-    [
-      'styled-components',
-      {
-        ssr: true,
-        displayName: true,
-        preprocess: false
-      }
-    ]
-  ],
-  env: {
-    production: {
-      plugins: [
-        [
-          'babel-plugin-jsx-remove-data-test-id',
-          {
-            attributes: 'test-id'
-          }
-        ]
-      ]
-    }
-  }
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+  };
 };

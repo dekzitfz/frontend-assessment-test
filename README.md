@@ -1,61 +1,36 @@
+# TypeScript Example
 
-**Due Date: 21:00 PM Tonight**
+<p>
+  <!-- iOS -->
+  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
+  <!-- Android -->
+  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
+  <!-- Web -->
+  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
+</p>
 
-### Test Case
-
-#### Pages
-##### Planet List Page
- - list all planets with infinite scroll and virtualize list.
-##### Planet Detail Page
- - list of the detailed planets.
- - createdDate data from the endpoint is a must for this endpoint
- - button for add to wishlist.
-##### Wishlist Page
-- list all planets already wishlist with pagination.
-
-### Endpoint
--   GraphQL: [https://graphql.org/swapi-graphql](https://graphql.org/swapi-graphql)
--   REST API: [https://swapi.dev](https://swapi.dev/)
-    
-### Tech Stack
--   Must use Typescript (usage of “any” as a type is not allowed)
--   ReactJS or ReactNative
-    
-### Requirement
--   Please use React Hook
--   Git (commit every feature when you done)
--   Feel free to use REST API or GraphQL
--   Please use CSS in JS (eg: styled-components)
--   Please use linter
--   Please avoid using big size dependency (moment / lodash)
--   Please use create-react-app or create-react-native-app for initializing a project
--   Create a test (functional or e2e) test is a big plus
--   Feel free to use your imagination for the user interface and optional data to show it.
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```sh
+npx create-react-native-app -t with-typescript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🚀 How to use
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+#### Creating a new project
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Install the CLI: `npm i -g expo-cli`
+- Create a project: `npx create-react-native-app -t with-typescript`
+- `cd` into the project
 
-## Learn More
+### Adding TypeScript to existing projects
 
-To learn more about Next.js, take a look at the following resources:
+- Create a blank TypeScript config: `touch tsconfig.json`
+- Run `yarn start` or `npm run start` to automatically configure TypeScript
+- Rename files to TypeScript, `.tsx` for React components and `.ts` for plain typescript files
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> 💡 You can disable the TypeScript setup in Expo CLI with the environment variable `EXPO_NO_TYPESCRIPT_SETUP=1 expo start`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📝 Notes
 
+- [Expo TypeScript guide](https://docs.expo.dev/versions/latest/guides/typescript/)
