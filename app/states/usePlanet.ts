@@ -11,8 +11,6 @@ interface IGetPlanet {
 
 const getData = async ({ url }: IGetPlanet) => {
   const response = await fetcher<ResponsePlanet>(url);
-
-  console.log(response);
   return response;
 };
 
@@ -28,18 +26,20 @@ const usePlanet = () => {
   }, []);
 
   const fetchMore = async () => {
+    if (!nextPage) return;
     setIsLoading(true);
     try {
       await getData({ url: nextPage }).then((response) => {
         setIsError(false);
         setPlanet([...planet, ...response.results]);
         setNextPage(response.next);
+        setIsLoading(false);
       });
     } catch (err) {
       setErrorMessage(err.message);
       setIsError(true);
+      setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   return {
