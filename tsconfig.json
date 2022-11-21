@@ -1,33 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": "src",
-    "types": [
-      "cypress"
-    ],
+    "baseUrl": ".",
     "paths": {
-      "@pages/*": ["./pages/*"],
-      "@styles/*": ["./styles/*"]
-    }
+      "@app/config/*": ["./app/config/*"],
+      "@app/context/*": ["./app/context/*"],
+      "@app/constants/*": ["./app/constants/*"],
+      "@app/layout/*": ["./app/layout/*"],
+      "@app/navigation/*": ["./app/navigation/*"],
+      "@app/screens/*": ["./app/screens/*"],
+      "@app/theme/*": ["./app/theme/*"],
+      "@app/utils/*": ["./app/utils/*"],
+      "@app/states/*": ["./app/states/*"]
+    },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "**/*.test.tsx",
-    "**/*.test.ts"
-  ]
+  "extends": "expo/tsconfig.base"
 }
